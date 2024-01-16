@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<!-- afterAddProduct() - Log method parameters -->
+	<type name="Magento\Quote\Model\Quote">
+		<plugin name="ecinternet-quotefeatures-magento-quote-model-quote"
+		        type="ECInternet\QuoteFeatures\Plugin\Magento\Quote\Model\QuotePlugin"/>
+	</type>
+
+	<!-- afterBeforeSave() - Log quote item data -->
+	<type name="Magento\Quote\Model\Quote\Item">
+		<plugin name="ecinternet-quotefeatures-magento-quote-model-quote-item"
+		        type="ECInternet\QuoteFeatures\Plugin\Magento\Quote\Model\Quote\ItemPlugin"/>
+	</type>
+
+	<!-- Custom Logger -->
+	<type name="ECInternet\QuoteFeatures\Logger\Logger">
+		<arguments>
+			<argument name="name" xsi:type="string">QuoteFeatures</argument>
+			<argument name="handlers" xsi:type="array">
+				<item name="system" xsi:type="object">ECInternet\QuoteFeatures\Logger\Handler</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

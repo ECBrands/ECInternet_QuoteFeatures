@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="ECInternet_QuoteFeatures::quote_features"
+		     title="Quote Features"
+		     module="ECInternet_QuoteFeatures"
+		     sortOrder="190"
+		     parent="ECInternet_Base::base"
+		     resource="ECInternet_QuoteFeatures::quote_features"
+		/>
+
+		<add id="ECInternet_QuoteFeatures::settings"
+		     title="Settings"
+		     module="ECInternet_QuoteFeatures"
+		     sortOrder="1"
+		     parent="ECInternet_QuoteFeatures::quote_features"
+		     action="adminhtml/system_config/edit/section/quote_features"
+		     resource="ECInternet_QuoteFeatures::settings"
+		/>
+	</menu>
+</config>
