@@ -1,5 +1,5 @@
 {
-	"name": "ecinternet/quote-features",
+	"name": "ecinternet/quotefeatures",
 	"description": "EC Internet Quote Features",
 	"require": {
 		"php": ">=7.4.0"
